@@ -37,7 +37,9 @@ function cleanDist() {
 }
 
 function building() {
-	return src(["app/css/*.css", "app/js/main.min.js", "app/**/*.html", "app/images/*", "app/fonts/*"], { base: "app" }).pipe(dest("dist"))
+	return src(["app/css/*.css", "app/js/main.min.js", "app/**/*.html", "app/images/*", "app/images/catalog/*", "app/fonts/*"], { base: "app" }).pipe(
+		dest("dist")
+	)
 }
 
 exports.styles = styles
