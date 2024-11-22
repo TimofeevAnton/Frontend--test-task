@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Frontend test</title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/style.min.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container container">
+					<div class="header__burger">
+						<div class="header__burger-line header__burger-line-1"></div>
+						<div class="header__burger-line header__burger-line-2"></div>
+						<div class="header__burger-line header__burger-line-3"></div>
+					</div>
+					<a href="#" class="header__logo">
+						<img src="./images/logo.svg" alt="" class="header__logo-img" />
+					</a>
+					<ul class="header__menu">
+						<li><a href="#">Продукты</a></li>
+						<li><a href="#">Цвета</a></li>
+						<li><a href="#">Вдохновение</a></li>
+						<li><a href="#">Советы</a></li>
+						<li><a href="#">Найти магазин</a></li>
+					</ul>
+					<div class="header__wrapper">
+						<a href="#" class="header__phone">+7 (495) 221-77-69</a>
+						<div class="header__phone-text">Заказать звонок</div>
+					</div>
+					<div class="header__icons">
+						<div class="header__icon" id="searchBtn">
+							<img src="/images/search.svg" alt="" />
+						</div>
+						<div class="header__icon" id="profileBtn">
+							<img src="/images/profile.svg" alt="" />
+						</div>
+						<div class="header__icon" id="favoriteBtn">
+							<img src="/images/heart.svg" alt="" />
+						</div>
+						<div class="header__cartBtn">0</div>
+					</div>
+				</div>
+			</header>
+			<main class="main">
+				<section class="banner">
+					<div class="banner__slider swiper">
+						<div class="banner__slider-inner swiper-wrapper">
+							<div class="banner__slide swiper-slide">
+								<img src="./images/banner.jpg" alt="" />
+							</div>
+							<div class="banner__slide swiper-slide">
+								<img src="./images/banner.jpg" alt="" />
+							</div>
+							<div class="banner__slide swiper-slide">
+								<img src="./images/banner.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="banner__container container">
+						<div class="banner__button-next">
+							<img src="./images/arrow.svg" alt="" />
+						</div>
+						<div class="banner__button-prev">
+							<img src="./images/arrow.svg" alt="" />
+						</div>
+						<div class="banner__slider-pagination swiper-pagination"></div>
+						<div class="bread">
+							<a class="bread__link" href="#">Главная</a>
+							<a class="bread__link" href="#">Продукты</a>
+							<a class="bread__link" href="#">Краски</a>
+						</div>
+						<div class="banner__content">
+							<h1>Краски</h1>
+							<p>Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!</p>
+						</div>
+					</div>
+				</section>
+				<section class="catalog">
+					<div class="catalog__container container">
+						<div class="catalog__col">
+							<div class="catalog__filters">
+								<div class="catalog__filter active" data-filter="isNew">
+									<div class="catalog__filter-toggler"></div>
+									<div class="catalog__filter-text">Новинки</div>
+								</div>
+								<div class="catalog__filter" data-filter="isExist">
+									<div class="catalog__filter-toggler"></div>
+									<div class="catalog__filter-text">Есть в наличии</div>
+								</div>
+								<div class="catalog__filter" data-filter="isContract">
+									<div class="catalog__filter-toggler"></div>
+									<div class="catalog__filter-text">Контрактные</div>
+								</div>
+								<div class="catalog__filter" data-filter="isExclusive">
+									<div class="catalog__filter-toggler"></div>
+									<div class="catalog__filter-text">Эксклюзивные</div>
+								</div>
+								<div class="catalog__filter" data-filter="isSale">
+									<div class="catalog__filter-toggler"></div>
+									<div class="catalog__filter-text">Распродажа</div>
+								</div>
+							</div>
+						</div>
+						<div class="catalog__main">
+							<div class="catalog__top">
+								<div class="catalog__counter">0 товаров</div>
+								<div class="catalog__filterBtn">Фильтры</div>
+								<div class="catalog__sort">
+									<div class="catalog__sort-current">Сначала дорогие</div>
+								</div>
+							</div>
+							<div class="catalog__list"></div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer"></footer>
+			<div class="overlay"></div>
+			<div class="cart">
+				<h2 class="cart__title">Корзина</h2>
+				<div class="cart__close">
+					<img src="./images/x.svg" alt="" />
+				</div>
+				<div class="cart__table">
+					<div class="cart__header">
+						<div class="cart__total">0 товаров</div>
+						<div class="cart__clear">Очистить список</div>
+					</div>
+					<div class="cart__list"></div>
+				</div>
+				<div class="cart__bottom">
+					<div class="cart__bottom-left">
+						<div class="cart__bottom-text">Итого</div>
+						<div class="cart__bottom-total">0</div>
+					</div>
+					<button class="cart__btn">Оформить заказ</button>
+				</div>
+			</div>
+			<div class="catalog__sort-list">
+				<div class="catalog__sort-type active" data-sorting-field="price" data-sort-dir="des">Сначала дорогие</div>
+				<div class="catalog__sort-type" data-sorting-field="price" data-sort-dir="asc">Сначала недорогие</div>
+				<div class="catalog__sort-type" data-sorting-field="popular" data-sort-dir="des">Сначала популярные</div>
+				<div class="catalog__sort-type" data-sorting-field="new" data-sort-dir="asc">Сначала новые</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+		<script src="js/main.min.js" defer></script>
+	</body>
+</html>
